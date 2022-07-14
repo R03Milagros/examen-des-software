@@ -1,0 +1,41 @@
+/* CREACION DE LA TABLA ALUMNO */
+CREATE TABLE `alumno` (
+  `codAlumno` varchar(6) NOT NULL,
+  `nombre_apellido` varchar(100) NOT NULL,
+PRIMARY KEY (`codAlumno`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/* CREACION DE LA TABLA MATRICULA */
+CREATE TABLE `matricula` (
+  `codAlumno` varchar(6) NOT NULL,
+  `semestre` varchar(7) NOT NULL,
+ CONSTRAINT `fk_alumno` FOREIGN KEY (`codAlumno`) REFERENCES `alumno` (`codAlumno`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/* CREACION DE LA VISTAS */
+
+CREATE VIEW Matriculados2021 AS
+SELECT a.codAlumno, a.nombre_apellido, m.semestre
+	FROM alumno a INNER JOIN matricula m ON a.codAlumno = m.codAlumno
+    WHERE m.semestre = '2021-2';
+    
+    
+CREATE VIEW Matriculados2022 AS
+SELECT a.codAlumno, a.nombre_apellido, m.semestre
+	FROM alumno a INNER JOIN matricula m ON a.codAlumno = m.codAlumno
+    WHERE m.semestre = '2022-1';
+
+CREATE VIEW Matriculados2021 AS
+SELECT a.codAlumno, a.nombre_apellido, m.semestre
+	FROM alumno a INNER JOIN matricula m ON a.codAlumno = m.codAlumno
+    WHERE m.semestre = '2021-2';
+    
+    
+CREATE VIEW Matriculados2022 AS
+SELECT a.codAlumno, a.nombre_apellido, m.semestre
+	FROM alumno a INNER JOIN matricula m ON a.codAlumno = m.codAlumno
+    WHERE m.semestre = '2022-1';
+
+
+
+

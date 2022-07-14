@@ -1,0 +1,31 @@
+body{
+  font-family: monospace;
+}
+table{
+  margin: auto;
+}
+tbody{
+  display: block;
+  height: 500px;
+  overflow: auto;
+}
+tbody::-webkit-scrollbar{
+  width: 10px;
+}
+tbody::-webkit-scrollbar-thumb{
+  background-color: blue;
+  border-radius: 5px;
+}
+td{
+  text-align: right;
+  font-size: 1.25rem;
+  border-bottom-width: var(--grosor);
+  border-bottom-color: var(--color-borde);
+  border-bottom-style: solid;
+}
+th{
+  font-size: 1.8rem;
+  border-bottom-width: var(--grosor);
+  border-bottom-color: var(--color-borde);
+  border-bottom-style: solid;
+}

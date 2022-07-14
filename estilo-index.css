@@ -1,0 +1,41 @@
+body {
+	background: ghostwhite;
+}
+header {
+	color: white;
+	background: #111e4a;
+	background-size: cover;
+	height:60px;
+	line-height: 60px;
+}
+h2 {
+	color: black;
+	background: gold;
+	background-size: cover;
+}
+.contenido{
+	width: fit-content;
+	margin: 0px auto;
+	padding-bottom: 25px;
+	border-bottom: 2px solid black;
+}
+
+.radio{
+	width: fit-content;
+	margin: 0px auto;
+}
+
+.btn-buscar{
+	background-color: #F1b320;
+	border-color:#0c0c0c;
+	color: rgb(0, 0, 0);
+	font-weight:bold;
+	padding: 10px 15px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 2px 2px;
+	cursor: pointer;
+	border-radius: 10px;
+}
